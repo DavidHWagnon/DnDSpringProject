@@ -15,7 +15,7 @@ public class Character {
 
 
     @Column(nullable = false, length = 140)
-    private String title;
+    private String name;
 
     @Column(nullable = false)
     private String description;
@@ -38,12 +38,12 @@ public class Character {
     @Column(nullable = false)
     private int charisma;
 
-	public Character(long id, long user_id, String title, String description, int strength, int dexterity,
+	public Character(long id, long user_id, String name, String description, int strength, int dexterity,
 			int constitution, int intelligence, int wisdom, int charisma) {
 		super();
 		this.id = id;
 //		this.user_id = user_id;
-		this.title = title;
+		this.name = name;
 		this.description = description;
 		this.strength = strength;
 		this.dexterity = dexterity;
@@ -69,12 +69,12 @@ public class Character {
 //		this.user_id = user_id;
 //	}
 
-	public String getTitle() {
-		return title;
+	public String getName() {
+		return name;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getDescription() {
