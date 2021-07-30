@@ -1,18 +1,118 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome!</title>
-<!--    <th:block th:include="partials/styles.html :: styles"></th:block>-->
-<!--Could also use the replace syntax to add a fragment to the document-->
-    <th:block th:replace="partials/styles.html :: styles"></th:block>
+  <meta charset="UTF-8">
+  <title>Build Your Own DND Character</title>
+  <script src="js/jquery-3.6.0.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+  <link rel="script" href="js/main-js.js">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <style>
+    *{
+      font-family: 'Libre Baskerville', serif;
+    }
+    body{
+      background-image: url("img/tavern-gif.webp");
+      background-size: cover;
+    }
+    h1{
+      font-size: xxx-large;
+      color: black;
+    }
+    h4{
+      color: black;
+    }
+    label{
+      color: white;
+      font-size: x-large;
+    }
+    .transparent{
+      background-color: rgba(116,131,131, .25);
+    
+
+  </style>
 </head>
 <body>
-<nav th:replace="partials/navbar.html :: navbar"></nav>
-<h1 class="bg-primary">This is the landing page!</h1>
-<!--Hello, just to prove we are seeing the HTML doc-->
-<!-- <th:block th:include="partials/scripts.html :: scripts"></th:block> -->
+    <nav th:replace="partials/navbar :: navbar" />
+<div class="transparent">
+  <h1 class="text-center pb-3"> "GREETINGS TRAVELER. TELL ME ABOUT YOURSELF" </h1>
+  <div class="row justify-content-around">
+    <h4 class="">Created by: David Wagnon</h4>
+    <h4 class=""><a>Social Media's Placeholder</a></h4>
+  </div>
+</div>
+
+<main class="d-flex col-6 justify-content-left mt-5">
+  <form class="card p-3" style="border: solid gray; background-color: rgba(50,26,47, 0.7);">
+    <div class="form-group card-group">
+      <label for="characterName" class="card-title">Enter Your Name</label>
+      <input type="text" class="form-control" id="characterName" placeholder="Ex: Raella">
+    </div>
+    <div class="form-group card-group">
+      <label for="class" class="card-title">Select Your Class</label>
+      <select class="custom-select form-group" id="class">
+        <option selected value="custom">Custom</option>
+        <option value="barbarian">Barbarian</option>
+        <option value="bard">Bard</option>
+        <option value="druid">Druid</option>
+        <option value="fighter">Fighter</option>
+        <option value="monk">Monk</option>
+        <option value="paladin">Paladin</option>
+        <option value="ranger">Ranger</option>
+        <option value="rouge">Rouge</option>
+        <option value="sorcerer">Sorcerer</option>
+        <option value="warlock">Warlock</option>
+        <option value="wizard">Wizard</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="race">Select Your Race</label>
+      <select class="custom-select form-group" id="race">
+        <option selected value="human">Human</option>
+        <option value="dragonborn">Dragonborn</option>
+        <option value="dwarf">Dwarf</option>
+        <option value="elf">Elf</option>
+        <option value="gnome">Gnome</option>
+        <option value="half-elf">Half-Elf</option>
+        <option value="halfling">Halfling</option>
+        <option value="half-orc">Half-orc</option>
+        <option value="tiefling">Tiefling</option>
+      </select>
+    </div>
+    <div class="form-group card-group">
+      <label for="characterBackground" class="card-title">What Are Your Origins?</label>
+      <textarea type="text" class="form-control" id="characterBackground" placeholder="Ex: I am Raella a 32 year old Druid Tiefling. I've been a wanderer all my life. My only true companions are the creatures of nature, who pass no judgment on my bloodline. I seek to gain the strength and experience necessary to protect my home and the ones I care for."></textarea>
+    </div>
+    <button id='create' class="btn btn-outline-secondary btn-block" style="color: black;background-color: #ec7c11" type="submit" >Create</button>
+  </form>
+</main>
+<script>
+  "use strict";
+  var custom = [{}];
+  var barbarian = [{}];
+  var bard = [{}];
+  var druid = [{}];
+  var fighter = [{}];
+  var monk = [{}];
+  var paladin = [{}];
+  var ranger = [{}];
+  var rouge = [{}];
+  var sorcerer = [{}];
+  var warlock = [{}];
+  var wizard = [{}];
 
 
+  $('#create').click(function() {
+            // $(this).css('background-color', '#FF0');
+            console.log("Creating Character")
+          }
+  );
+
+
+</script>
 </body>
 </html>
