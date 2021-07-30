@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DnDSpringProjectApplication<neptune-springblog>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.DnDSpringProject.DnDSpringProjectApplication",
+            "projectName": "neptune-springblog",
+            "args": ""
+        }
+    ]
+}
